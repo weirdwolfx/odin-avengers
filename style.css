@@ -1,27 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 18px;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Roboto, sans-serif;
 }
 
 header, main, .sign-up, footer {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 main {
     justify-content: center;
 }
 
-header {
+/* justify-content: center is overriden here */
+body > header {
     justify-content: space-between;
-    width: 100%;
 }
 
 li {
@@ -52,9 +60,78 @@ li {
     flex-wrap: wrap;
 }
 
+header, footer {
+    height: 4.25em;
+    width: 100%;
+}
+
+footer {
+    justify-content: center;
+}
+
+header, footer, main {
+    background-color: #1F2937;
+}
+
+.links a, .content .secondary-hero, footer {
+    color: #E5E7EB;
+    font-size: 1rem;
+}
+
+.content .hero {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+article {
+    background-color: #E5E7EB;
+    width: 100%;
+    text-align: center;
+}
+
+.quote {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.quote, .information-header {
+    color: #1F2937;
+}
+
+.information-header {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+button, .sign-up {
+    color: white;
+    background-color: #3882F6;
+    border: solid #3882F6;
+}
+
+.sign-up > button {
+    border-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.quote-person {
+    font-weight: 700;
+}
+
+
+
+
+
+
+
 /* FOR DEBUGGING
 body {
-    outline: 2px dashed lime;
+    outline: 2px solid lime;
 }
 
 main, header, section, article, footer {

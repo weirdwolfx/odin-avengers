@@ -23,8 +23,15 @@ header, main, .sign-up, footer {
     justify-content: center;
 }
 
+body > * {
+    padding-inline: clamp(50px, 16vw - 1rem, 250px);
+}
+
 main {
     justify-content: center;
+    padding-bottom: clamp(40px, min(20vh, 9vw - 8px), 150px);
+    padding-top: clamp(20px, min(10vh, 4.5vw - 6px), 70px);
+    gap: 30px;
 }
 
 /* justify-content: center is overriden here */
@@ -38,6 +45,7 @@ li {
 
 .links {
     display: flex;
+    gap: 1.5em;
 }
 
 .logo {
@@ -46,18 +54,20 @@ li {
 }
 
 .content-image {
-    width: 40%;  
+    width: max(40%, 350px);  
     height: auto;
 }
 
 .item > img {
-    width: 250px;
-    height: auto;
+    width: max(15vw, 15vh, 160px);
+    height: auto;;
 }
 
 .members {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: max(3.5vw, 3vh, 20px);
 }
 
 header, footer {
@@ -87,7 +97,9 @@ header, footer, main {
 article {
     background-color: #E5E7EB;
     width: 100%;
-    text-align: center;
+    padding-top: clamp(40px, min(18vh, 7.5vw - 6px), 110px);
+    padding-bottom: clamp(20px, min(10vh, 4.5vw - 6px), 70px);
+    padding-inline: clamp(50px, 25vw, 425px);
 }
 
 .quote {
@@ -103,16 +115,22 @@ article {
 .information-header {
     font-weight: 900;
     font-size: 2rem;
+    text-align: center;
+    margin-bottom: clamp(20px, min(5vh, 4vw - 1.25rem), 40px);
 }
 
 button, .sign-up {
     color: white;
     background-color: #3882F6;
     border: solid #3882F6;
+    padding: 0.35em 1.75em;
+    border-radius: 6px;
 }
 
 .sign-up > button {
     border-color: white;
+    border-width: 2px;
+    margin-left: min(130px, 8vw - 5px);
 }
 
 a {
@@ -121,15 +139,48 @@ a {
 
 .quote-person {
     font-weight: 700;
+    text-align: right;
+}
+
+.members-section {
+    padding-bottom: clamp(40px, min(18vh, 7.5vw - 6px), 110px);
+    padding-top: clamp(20px, min(8vh, 4.5vw - 8px), 50px);
+}
+
+.sign-up {
+    margin-block: clamp(40px, min(18vh, 7.5vw - 6px), 110px); 
+    padding-block: 1.75em;
+    padding-inline: clamp(30px, 6vw, 100px)
+}
+
+.sign-up-header {
+    font-weight: 700;
+}
+
+.call-to-action-text {
+    font-size: 0.85rem;
+}
+
+.content > button {
+    margin-top: 1em;
+}
+
+button {
+    font-size: 0.9rem;
+}
+
+.item > p{
+    text-align: center;
+    color: #1F2937;
+    font-size: 1.1rem;
 }
 
 
+/* 
+body * {
+    outline: 2px solid red;
+}
 
-
-
-
-
-/* FOR DEBUGGING
 body {
     outline: 2px solid lime;
 }

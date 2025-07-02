@@ -183,14 +183,3 @@ button {
 button:hover {
     cursor: pointer;
 }
-
-
-/* 
-body * {
-    outline: 2px solid red;
-}
-
-body {
-    outline: 2px solid lime;
-}
- */
